@@ -26,15 +26,6 @@ section
   flex-wrap: wrap;
   overflow: hidden;
 }
-section::before 
-{
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(#000,rgb(252, 235, 0),#000);
-  animation: animate 5s linear infinite;
-}
 @keyframes animate 
 {
   0%
@@ -46,21 +37,8 @@ section::before
     transform: translateY(100%);
   }
 }
-section span 
-{
-  position: relative;
-  display: block;
-  width: calc(6.25vw - 2px);
-  height: calc(6.25vw - 2px);
-  background: #181818;
-  z-index: 2;
-  transition: 1.5s;
-}
-section span:hover 
-{
-  background: rgb(255, 166, 0);
-  transition: 0s;
-}
+
+
 
 section .signin
 {
@@ -73,7 +51,7 @@ section .signin
   align-items: center;
   padding: 40px;
   border-radius: 10px;
-  box-shadow: 0 0 45px rgb(0, 0, 0);
+  box-shadow: 0 0 45px rgb(255, 187, 40);
 }
 section .signin .content 
 {
@@ -228,28 +206,6 @@ p{
   background-color: #ffffff;
 }
 
-.download-link:after {
-  content: "";
-  display: block;
-  position: absolute;
-  left: 0;
-  top:0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  transition: all 0.5s;
-  box-shadow: 0 0 10px 40px rgb(255, 166, 0);
-}
-
-.download-link:active:after {
-  box-shadow: 0 0 0 0 rgb(255, 166, 0);
-  position: absolute;
-  border-radius: 4em;
-  left: 0;
-  top:0;
-  opacity: 1;
-  transition: 0s;
-}
 
 .download-link:active {
   top: 1px;
